@@ -89,29 +89,12 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -alF'
 alias vi='vim'
 alias xopen='xdg-open'
-alias agamemnon='ssh -i ~/.ssh/fuji b_hage09@agamemnon'
-alias odroid='ssh odroid@128.176.106.8'
-alias beavis='ssh -i ~/.ssh/fuji bastian@192.168.0.101'
-alias vpne='sudo openvpn --config ~/documents/vpne/Informatics-only-Forum.ovpn'
-alias vpnm='sudo openconnect vpn.uni-muenster.de'
-alias vpnibm='sudo openconnect bblab-external.ibm.com'
-alias spell_de='aspell -l de_DE -t check'
-alias arch_config='vim ~/documents/misc/config_arch.txt'
-alias sergei='cat ~/documents/CHECKLIST.txt'
-alias explore='~/development/exploration/executor/scripts/explore.py'
 
 ### ENV-VARS
 # reduces timout between normal and edit mode in zsh
 export KEYTIMEOUT=1
-export PATH=/home/bastian/tools/scripts/:$PATH
-export PATH=/home/bastian/.gem/ruby/2.3.0/bin:$PATH
-export PATH=/home/bastian/development/lift/scripts/compiled_scripts:$PATH
 export EDITOR=/usr/bin/vim
 export BROWSER=firefox
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
-export LIFT_PLATFORM=2
-export LIFT=/home/bastian/development/lift/
-export EXECUTOR=/home/bastian/development/exploration/executor
 
 ### ZSH VI and PROMPT
 # vim keybinding
