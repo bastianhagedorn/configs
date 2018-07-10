@@ -13,6 +13,7 @@ function _prompt_char() {
 # these two values to choose.  If you don't specify, we'll assume you're
 # using the "dark" variant.
 
+SOLARIZED_THEME=light
 case ${SOLARIZED_THEME:-dark} in
     light) bkg=white;;
     *)     bkg=black;;
