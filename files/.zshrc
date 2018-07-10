@@ -89,12 +89,72 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -alF'
 alias vi='vim'
 alias xopen='xdg-open'
+alias agamemnon='ssh -i ~/.ssh/fuji b_hage09@agamemnon'
+alias odroid='ssh odroid@128.176.106.8'
+alias blue='ssh -i ~/.ssh/fuji odroid@129.215.91.70'
+alias red='ssh -i ~/.ssh/fuji odroid@129.215.91.82'
+alias moe='ssh -i ~/.ssh/fuji odroid@10.88.0.8'
+alias ned='ssh -i ~/.ssh/fuji odroid@10.88.0.14'
+alias gray='ssh -i ~/.ssh/fuji odroid@129.215.90.147'
+alias fuji='ssh -i ~/.ssh/fuji v1bhaged@fuji.inf.ed.ac.uk'
+alias suzuka='ssh -i ~/.ssh/fuji v1bhaged@suzuka.inf.ed.ac.uk'
+alias monaco='ssh -i ~/.ssh/fuji v1bhaged@monaco.inf.ed.ac.uk'
+alias spa='ssh -i ~/.ssh/fuji v1bhaged@spa.inf.ed.ac.uk'
+alias tofu='ssh -i ~/.ssh/fuji v1bhaged@tofu.inf.ed.ac.uk'
+alias michel='ssh -i ~/.ssh/fuji v1bhaged@michel.inf.ed.ac.uk'
+alias tim='ssh -i ~/.ssh/fuji v1bhaged@tim.inf.ed.ac.uk'
+alias beavis='ssh -i ~/.ssh/fuji bastian@192.168.0.101'
+alias vpne='sudo openvpn --config ~/documents/vpne/Informatics-only-Forum.ovpn'
+alias vpnm='sudo openconnect vpn.uni-muenster.de'
+alias vpnibm='sudo openconnect bblab-external.ibm.com'
+alias spell_de='aspell -l de_DE -t check'
+alias arch_config='vim ~/documents/misc/config_arch.txt'
+alias sergei='cat ~/documents/CHECKLIST.txt'
+alias explore='~/development/exploration/executor/scripts/explore.py'
+alias present='pdfpc -g '
+alias clip='xsel -ib'
 
 ### ENV-VARS
 # reduces timout between normal and edit mode in zsh
 export KEYTIMEOUT=1
+export PATH=/home/bastian/tools/scripts/common:$PATH
+export PATH=/home/bastian/tools/scripts/lift:$PATH
+export PATH=/home/bastian/publications/lift_stencil/artifact/scripts:$PATH
+export PATH=/home/bastian/.gem/ruby/2.3.0/bin:$PATH
+export PATH=/home/bastian/development/lift/scripts/compiled_scripts:$PATH
+export PATH=/home/bastian/.local/bin:$PATH
+export PATH=/home/bastian/tools/ppcg-fork/ppcg:$PATH
+export PATH=/home/bastian/publications/lift_stencil/measurements/ppcg/scripts:$PATH
+export PATH=/home/bastian/repos/liftstencil-cgo2018-artifact/scripts:$PATH
+export PATH=/home/bastian/.gem/ruby/2.4.0/bin:$PATH
 export EDITOR=/usr/bin/vim
 export BROWSER=firefox
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-jetbrains
+export LIFT_PLATFORM=2
+export LIFT=/home/bastian/development/lift/
+export EXECUTOR=/home/bastian/development/exploration/executor
+export RED=129.215.91.82
+export MOE=10.88.0.8
+export NED=10.88.0.14
+export BLUE=129.215.91.70
+export GRAY=129.215.90.147
+export ATF=/home/bastian/repos/atf/pvs-pjs-ss17/atfc/build
+export LD_LIBRARY_PATH=/home/bastian/tools/llvm-3.7.0/install/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/bastian/development/benchmarks/Halide/bin:$LD_LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/home/bastian/development/benchmarks/Halide/build/include:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/home/bastian/development/benchmarks/Halide/build/include:$CPLUS_INCLUDE_PATH
+# fixed sbt error -- was showing no colors
+export TERM=xterm-color
+# CGO18 artifact specifics
+export PPCG=/home/bastian/tools/ppcg-fork/ppcg
+export OCL_PLATFORM_ID=0
+export OCL_DEVICE_ID=0
+export ITERATIONS=2
+export CLANG=/usr/bin/clang
+export LLVM_CONFIG=/usr/bin/llvm-config
+
+# to compile bs slides from michel
+#export TEXINPUTS=".:/home/bastian/teaching/bs/uebung//:"
 
 ### ZSH VI and PROMPT
 # vim keybinding
@@ -105,3 +165,9 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+PATH="/home/bastian/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/bastian/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/bastian/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/bastian/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/bastian/perl5"; export PERL_MM_OPT;
