@@ -100,6 +100,7 @@ alias fuji='ssh -i ~/.ssh/fuji v1bhaged@fuji.inf.ed.ac.uk'
 alias suzuka='ssh -i ~/.ssh/fuji v1bhaged@suzuka.inf.ed.ac.uk'
 alias monaco='ssh -i ~/.ssh/fuji v1bhaged@monaco.inf.ed.ac.uk'
 alias spa='ssh -i ~/.ssh/fuji v1bhaged@spa.inf.ed.ac.uk'
+alias avus='ssh -i ~/.ssh/fuji v1bhaged@avus.inf.ed.ac.uk'
 alias tofu='ssh -i ~/.ssh/fuji v1bhaged@tofu.inf.ed.ac.uk'
 alias michel='ssh -i ~/.ssh/fuji v1bhaged@michel.inf.ed.ac.uk'
 alias tim='ssh -i ~/.ssh/fuji v1bhaged@tim.inf.ed.ac.uk'
@@ -165,6 +166,14 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-execute
+
+[[ -s /home/bastian/.autojump/etc/profile.d/autojump.sh ]] && source /home/bastian/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
+
 
 PATH="/home/bastian/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/bastian/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
